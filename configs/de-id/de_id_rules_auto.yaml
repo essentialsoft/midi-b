@@ -1,0 +1,193 @@
+rules:
+  confidence_threshold: 80
+  dicom_tags:
+  - name: Patient's Name
+    tag:
+    - 0x10
+    - 0x10
+  - name: Patient ID
+    tag:
+    - 0x10
+    - 0x20
+  - name: Patient's Insurance Plan
+    tag:
+    - 0x10
+    - 0x1060
+  - name: Patient's Relationship Status
+    tag:
+    - 0x10
+    - 0x1070
+  - name: Other Patient IDs
+    tag:
+    - 0x10
+    - 0x1000
+  - name: Other Patient Names
+    tag:
+    - 0x10
+    - 0x1001
+  - name: Accession Number
+    tag:
+    - 0x8
+    - 0x50
+  - name: Secondary Capture Device ID
+    tag:
+    - 0x18
+    - 0x1010
+  - name: Date of Secondary Capture
+    tag:
+    - 0x18
+    - 0x1012
+  - name: '[The Acquisition Date of NRA]'
+    tag:
+    - 0x7005
+    - 0x1024
+  - name: Institution Name
+    tag:
+    - 0x8
+    - 0x80
+  - name: Date of Last Detector Calibration
+    tag:
+    - 0x18
+    - 0x700C
+  - name: '[PET scan_ready]'
+    tag:
+    - 0x9
+    - 0x100E
+  - name: '[PET acq_start]'
+    tag:
+    - 0x9
+    - 0x106C
+  - name: Date of Last Calibration
+    tag:
+    - 0x18
+    - 0x1200
+  - name: Image Comments
+    tag:
+    - 0x20
+    - 0x4000
+  - name: Plate ID
+    tag:
+    - 0x18
+    - 0x1004
+  - name: Detector ID
+    tag:
+    - 0x18
+    - 0x700A
+  - name: Scheduled Procedure Step ID
+    tag:
+    - 0x40
+    - 0x9
+  - name: Requested Procedure ID
+    tag:
+    - 0x40
+    - 0x1001
+  - name: Retrieve AE Title
+    tag:
+    - 0x8
+    - 0x54
+  - name: Study Comments
+    tag:
+    - 0x32
+    - 0x4000
+  - name: Referring Physician's Name
+    tag:
+    - 0x8
+    - 0x90
+  - name: Operators' Name
+    tag:
+    - 0x8
+    - 0x1070
+  - name: Scheduled Performing Physician's Name
+    tag:
+    - 0x40
+    - 0x6
+  - name: Medical Alerts
+    tag:
+    - 0x10
+    - 0x2000
+  - name: Comments on Radiation Dose
+    tag:
+    - 0x40
+    - 0x310
+  - name: Occupation
+    tag:
+    - 0x10
+    - 0x2180
+  - name: Acquisition Comments
+    tag:
+    - 0x18
+    - 0x4000
+  - name: Performed Station AE Title
+    tag:
+    - 0x40
+    - 0x241
+  - name: Clinical Trial Subject ID
+    tag:
+    - 0x12
+    - 0x40
+  - name: Scheduled Study Location AE Title
+    tag:
+    - 0x32
+    - 0x1021
+  - name: Admitting Diagnoses Description
+    tag:
+    - 0x8
+    - 0x1080
+  - name: Private Creator
+    tag:
+    - 0x19
+    - 0x10
+  - name: Imaging Service Request Comments
+    tag:
+    - 0x40
+    - 0x2400
+  - name: [PC Velocity]
+    tag:
+    - 0x2001
+    - 0x101A
+  - name: Study ID
+    tag:
+    - 0x10
+    - 0x20
+  - name: [PMTF Information 1]
+    tag:
+    - 0x29
+    - 0x1131
+  keywords:
+  - Address
+  - Telephone Numbers
+  - Fax Numbers
+  - Suite id
+  - Series Number
+  - Series Date
+  - Series from which Prescribed
+  - Series from which prescribed
+  - Slop_int_10...slop_int_17
+  - Clinical Trial Site Name
+  - Clinical Trial Protocol ID
+  - Clinical Trial Protocol Name
+  - Clinical Trial Site ID
+  - Clinical Trial Time Point ID
+  - Clinical Trial Time Point Description
+  - Series Number
+  - Verifying Observer Name
+  - Person Name
+  - Content Creator's Name
+  - Station Name
+  - PET batch_description
+  - Coil ID Data
+  - Physician(s) of Record
+  - Service id
+  - Img is original or unoriginal
+  regex:
+  - '[a-zA-Z]{3}'
+  - \d{2}-\d{2}-\d{4}
+  - \d{3}[-.\s]?\d{3}[-.\s]?\d{4}
+  - \d{3}[-.\s]?d{7}
+  - \d{2}/\d{2}/\d{4}
+  - \d{3}-\d{2}-\d{4}
+  - \(\d{3}\)[\s]?\d{3}-\d{4}
+  - \d{2}.\d{2}.\d{4}
+  - '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}'
+  - \d\/\d{2}
+  - \d{5}(?:[-\s]\d{4})?
